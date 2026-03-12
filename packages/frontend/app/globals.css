@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1a0511;
+  --foreground: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f040a;
+    --foreground: #f1f5f9;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Base custom classes from index.html */
+.bg-primary { background-color: #f20d80; }
+.text-primary { color: #f20d80; }
+.border-primary { border-color: #f20d80; }
+.shadow-primary { box-shadow: 0 0 20px rgba(242,13,128,0.4); }
+.hover\:shadow-primary-lg:hover { box-shadow: 0 0 30px rgba(242,13,128,0.6); }
+.bg-background-dark { background-color: #0d0208; }
+.text-background-dark { color: #0d0208; }
+.focus-neon:focus { box-shadow: 0 0 5px #f20d80, 0 0 20px #f20d80; }
+.bg-background-light { background-color: #f8f6f7; }
+.text-background-light { color: #f8f6f7; }
+.custom-glow-circle { box-shadow: 0 0 20px rgba(242,13,128,0.2); }
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-glow {
+  box-shadow: 0 0 20px rgba(242, 13, 128, 0.3), 0 0 40px rgba(0, 243, 255, 0.1);
+}
+
+.active-lesson {
+  background: rgba(242, 13, 128, 0.15) !important;
+  border-left: 4px solid #f20d80 !important;
+}
+
+.bg-dark-gradient {
+  background: radial-gradient(circle at top right, #1a0b1a, #0a080c);
+}
+
+@theme {
+  --background-image-mystic-gradient: radial-gradient(circle at 0% 0%, #1a0b12 0%, #0a0508 50%, #1a0b12 100%);
+  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+  --animate-fade-in-left: fade-in-left 0.8s ease-out forwards;
+  --animate-fade-in-right: fade-in-right 0.8s ease-out forwards;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fade-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+}

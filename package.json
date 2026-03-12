@@ -1,0 +1,11 @@
+{
+  "name": "pink-re-think",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:frontend": "npm run dev -w packages/frontend",
+    "dev:backend": "npm run dev -w packages/backend"
+  }
+}
