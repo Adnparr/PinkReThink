@@ -1,282 +1,250 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>EmpowHer - Educational Community Hub</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f20d80",
-                        "background-light": "#1a0b12",
-                        "background-dark": "#0a0508",
-                        "glass": "rgba(255, 255, 255, 0.03)",
-                        "glass-border": "rgba(255, 255, 255, 0.1)",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px"},
-                    backgroundImage: {
-                      'mystic-gradient': 'radial-gradient(circle at 0% 0%, #1a0b12 0%, #0a0508 50%, #1a0b12 100%)',
-                    }
-                },
+<html class="dark" lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ec1380",
+              "background-light": "#f8f6f7",
+              "background-dark": "#120812",
             },
-        }</script>
-<style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+            fontFamily: {
+              display: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background:
+          radial-gradient(circle at top left, #221019, #120812),
+          radial-gradient(circle at bottom right, #4a044e, #120812);
+        background-attachment: fixed;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .neon-glow {
+        box-shadow: 0 0 15px rgba(236, 19, 128, 0.4);
+      }
     </style>
-</head>
-<body class="dark:bg-background-dark text-slate-900 dark:text-slate-100 bg-mystic-gradient">
-<div class="layout-container flex h-full grow flex-col">
-<!-- Navigation Header -->
-<header class="flex items-center justify-between whitespace-nowrap border-b border-white/10 bg-black/40 backdrop-blur-md px-6 md:px-20 py-4 sticky top-0 z-50">
-<div class="flex items-center gap-8">
-<div class="flex items-center gap-3 text-primary">
-<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
-<span class="material-symbols-outlined">auto_awesome</span>
-</div>
-<h2 class="dark:text-slate-100 text-xl font-bold leading-tight tracking-tight text-white">EmpowHer</h2>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
-<a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#">Community</a>
-<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="#">Courses</a>
-<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="#">Mentors</a>
-</nav>
-</div>
-<div class="flex flex-1 justify-end gap-6 items-center">
-<label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
-<div class="flex w-full flex-1 items-stretch rounded-xl h-full bg-primary/5 dark:bg-primary/10">
-<div class="text-slate-400 flex items-center justify-center pl-4">
-<span class="material-symbols-outlined">search</span>
-</div>
-<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 h-full placeholder:text-slate-400 px-4 text-sm font-normal" placeholder="Search discussions..."/>
-</div>
-</label>
-<button class="flex items-center gap-2 p-2 rounded-full hover:bg-primary/10 text-slate-600 dark:text-slate-400">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/20" data-alt="Portrait of a smiling professional woman profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCmYEkQC7c-KoL4UoLZnVZ_NOSY4OZgAW4pynymOE4bfpKymzh32grReJHukMMsGTF972vBz6nNZt9NWP9ggHzdjfJr0_RjF92p1Up2zOCvSCZpmLNHe0L3_gfGy0JbTU4IWqHYOgn2j1a3brLGK74log-CGfxS-3p9UOpA3FRthNf4i2oAMlcfMqOXr18ms_geEdd7rjqYm0CfeJdFkamoz5YZeaXX4VU9K7MBUxuNtY4c9vVoe9hi8XuotCzCwozQj3FTeHNURjk");'></div>
-</div>
-</header>
-<main class="max-w-7xl mx-auto w-full px-6 md:px-10 grid grid-cols-1 lg:grid-cols-12 py-4 gap-6">
-<!-- Sidebar Navigation -->
-<aside class="hidden lg:flex lg:col-span-3 flex-col gap-6">
-<div class="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 shadow-2xl">
-<h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Navigation</h3>
-<nav class="flex flex-col gap-1">
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary font-bold" href="#">
-<span class="material-symbols-outlined">forum</span> Feed
-                    </a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-all" href="#">
-<span class="material-symbols-outlined">groups</span> My Groups
-                    </a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-all" href="#">
-<span class="material-symbols-outlined">bookmark</span> Saved Posts
-                    </a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-all" href="#">
-<span class="material-symbols-outlined">settings</span> Preferences
-                    </a>
-</nav>
-</div>
-<div class="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 shadow-2xl">
-<h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Upcoming Events</h3>
-<div class="flex flex-col gap-4">
-<div class="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 shadow-sm hover:border-primary/30 transition-all group">
-<div class="flex flex-col items-center justify-center bg-primary/10 text-primary rounded-lg p-2 min-w-[50px]">
-<span class="text-sm font-bold">MAY</span>
-<span class="text-lg font-black leading-none">24</span>
-</div>
-<div>
-<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Leadership Workshop</p>
-<p class="text-xs text-slate-500">Virtual • 2:00 PM</p>
-</div>
-</div>
-</div>
-</div>
-</aside>
-<!-- Main Content Area -->
-<section class="lg:col-span-6 flex flex-col gap-6">
-<!-- Hero Section / Categories -->
-<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 to-black border border-primary/30 px-8 py-10 text-white shadow-[0_0_50px_-12px_rgba(242,13,128,0.3)]">
-<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
-<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-<path d="M44.7,-76.4C58.2,-69.2,70.1,-58.3,77.8,-45.3C85.5,-32.3,89,-16.1,88.4,-0.4C87.7,15.4,82.8,30.7,74.5,43.4C66.1,56,54.4,65.9,41.1,72.9C27.7,79.9,13.9,84,0.1,83.9C-13.7,83.8,-27.4,79.5,-39.8,71.9C-52.2,64.2,-63.3,53.2,-71.4,40.1C-79.5,27.1,-84.6,12.1,-84.5,-2.9C-84.4,-17.9,-79.1,-32.8,-70.2,-45.1C-61.4,-57.4,-49,-67,-35.8,-74.5C-22.6,-82,-11.3,-87.4,2.5,-91.7C16.3,-95.9,31.2,-83.5,44.7,-76.4Z" fill="#f20d80" transform="translate(100 100)"></path>
-</svg>
-</div>
-<div class="relative z-10 flex flex-col gap-4">
-<h1 class="text-3xl font-black bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Share Your Wisdom</h1>
-<p class="text-white/70 max-w-[480px]">Join thousands of women learning and growing together in our safe, supportive space.</p>
-<div class="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 shadow-sm hover:border-primary/30 transition-all group">
-<button class="flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold shadow-[0_0_20px_rgba(242,13,128,0.5)] hover:shadow-[0_0_30px_rgba(242,13,128,0.7)] transition-all hover:scale-105 active:scale-95">
-<span class="material-symbols-outlined text-[20px] text-primary group-hover:drop-shadow-[0_0_8px_rgba(242,13,128,0.8)] transition-all">edit</span> Start a Discussion
-                        </button>
-</div>
-</div>
-</div>
-<!-- Category Tabs -->
-<div class="flex overflow-x-auto gap-2 pb-2 no-scrollbar border-b border-primary/5">
-<button class="px-5 py-2 whitespace-nowrap rounded-full bg-primary text-white font-bold text-sm">All Topics</button>
-<button class="px-5 py-2 whitespace-nowrap rounded-full bg-white/5 text-white/60 font-bold text-sm border border-white/10 hover:border-primary/50 hover:text-white transition-all">Trending Topics</button>
-<button class="px-5 py-2 whitespace-nowrap rounded-full bg-white/5 text-white/60 font-bold text-sm border border-white/10 hover:border-primary/50 hover:text-white transition-all">Success Stories</button>
-<button class="px-5 py-2 whitespace-nowrap rounded-full bg-white/5 text-white/60 font-bold text-sm border border-white/10 hover:border-primary/50 hover:text-white transition-all">Parenting Tips</button>
-<button class="px-5 py-2 whitespace-nowrap rounded-full bg-white/5 text-white/60 font-bold text-sm border border-white/10 hover:border-primary/50 hover:text-white transition-all">Career Growth</button>
-</div>
-<!-- Feed Content -->
-<div class="flex flex-col gap-4">
-<!-- Discussion Card 1 -->
-<div class="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 shadow-sm hover:border-primary/30 transition-all group">
-<div class="flex justify-between items-start mb-4">
-<div class="flex items-center gap-3">
-<div class="size-10 rounded-full bg-center bg-cover" data-alt="Profile photo of a community member" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgbpTEtE4nHkb2KG-F-OxFsUGb3MjrNobtfSLdAVMKVUuyoNsOX7FIznT-6DIwECEkXAJKEpvdSZsb-brCDUDLPiG7MeB-cBMd71ab6-G0mh_MGc8gk220WPwlJZCDYjCiQcBC-YEEpbO2IfUcpuvl3EghXT3acmC0MSCrj0tOO-yIca5Q-plFr_Qb60hSvlapSThf8RprftQ0yw9NaeciqROnqA-3DBHnbLDmxw6Lu_YCsvzygMeBfa4HgkKrpMHbb3ZqhzwwOQYh");'></div>
-<div>
-<h4 class="text-sm font-bold text-white">Elena Richardson</h4>
-<p class="text-xs text-slate-500">Parenting Tips • 2 hours ago</p>
-</div>
-</div>
-<span class="bg-primary/10 text-primary text-[10px] font-bold uppercase px-2 py-1 rounded">Hot</span>
-</div>
-<h3 class="text-lg font-bold text-white mb-2 leading-snug group-hover:text-primary transition-colors">How to balance full-time study with toddlers at home?</h3>
-<p class="text-white/60 text-sm line-clamp-2 mb-4">
-                        I've just started my nursing degree and I'm struggling to find focused study time while my 3-year-old is awake. Does anyone have routines or tips that actually work?
-                    </p>
-<div class="flex items-center gap-6 text-slate-400">
-<button class="flex items-center gap-1.5 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-[20px] text-primary group-hover:drop-shadow-[0_0_8px_rgba(242,13,128,0.8)] transition-all">favorite</span>
-<span class="text-xs font-bold text-white/80">128</span>
-</button>
-<button class="flex items-center gap-1.5 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-[20px] text-primary group-hover:drop-shadow-[0_0_8px_rgba(242,13,128,0.8)] transition-all">chat_bubble</span>
-<span class="text-xs font-bold text-white/80">45 Replies</span>
-</button>
-<button class="flex items-center gap-1.5 ml-auto hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-[20px] text-primary group-hover:drop-shadow-[0_0_8px_rgba(242,13,128,0.8)] transition-all">share</span>
-</button>
-</div>
-</div>
-<!-- Discussion Card 2 (Success Story) -->
-<div class="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 shadow-sm hover:border-primary/30 transition-all group">
-<div class="flex justify-between items-start mb-4">
-<div class="flex items-center gap-3">
-<div class="size-10 rounded-full bg-center bg-cover" data-alt="Profile photo of a successful mentor" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA08RNv4sYkCjODbGBIBKiTFJbcgDvzSiHtzRGOr17h7wmLg7x-QA4SSIuElpmSXlbb2HJK11RMYS70CvW2sgOGSyiTt5FZgZe4XEwCF2N91wfNBseZi0Xh98VpxVlmVlPMhdhHHkyQcoVYTcVI8SWIYIDi7rACRG7_7foWCuGaZ3R0d8tuD4bx1atzA8uWzVsNlQtT3ZZIf4KW8m3Rip0E91sJYZ5FEjm5kir1dmONdukV6znj5ONlHdmj9AX3Bi4kTgG5aNm7uHN2");'></div>
-<div>
-<h4 class="text-sm font-bold text-white">Maya Patel</h4>
-<p class="text-xs text-slate-500">Success Stories • 5 hours ago</p>
-</div>
-</div>
-</div>
-<h3 class="text-lg font-bold text-white mb-2 leading-snug group-hover:text-primary transition-colors">From stay-at-home mom to Junior Developer in 6 months!</h3>
-<div class="w-full h-40 rounded-xl bg-center bg-cover mb-4" data-alt="Coding setup with laptop and coffee" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCyTiogNAdEWK9AWB6_c4jFKxgUQzQk6Hovv-RJMeYhJrRQXNa-jr_66fhC_tYMk4fIFaIsV0-Fg_o56C4X8FzFUSv6rgFCLzrLjuKH40y_nPpNZ9aqn9iFWKybbSsjHsRuwrrhnGPDNXocQ1f9dFjkrxNLSUUqYLGvEKdQhjyeSCCrFJ6-n4uaHZ3ic_ZflS6kF9O478j3UKWO3g2E7WblqNb4AaC3diAl8OQlLukILp9QU1Q8yiWNn7bmdPV85m-xAgaSccPr5x3N");'></div>
-<p class="text-white/60 text-sm line-clamp-2 mb-4">
-                        I wanted to share my journey. After taking the Web Dev foundational course here, I landed my first internship! Don't give up, the community support was everything...
-                    </p>
-<div class="flex items-center gap-6 text-slate-400">
-<button class="flex items-center gap-1.5 text-primary">
-<span class="material-symbols-outlined text-[20px] text-primary group-hover:drop-shadow-[0_0_8px_rgba(242,13,128,0.8)] transition-all">favorite</span>
-<span class="text-xs font-bold text-white/80">842</span>
-</button>
-<button class="flex items-center gap-1.5 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-[20px] text-primary group-hover:drop-shadow-[0_0_8px_rgba(242,13,128,0.8)] transition-all">chat_bubble</span>
-<span class="text-xs font-bold text-white/80">92 Replies</span>
-</button>
-</div>
-</div>
-<!-- Discussion Card 3 -->
-<div class="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 shadow-sm hover:border-primary/30 transition-all group">
-<div class="flex justify-between items-start mb-4">
-<div class="flex items-center gap-3">
-<div class="size-10 rounded-full bg-center bg-cover" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2OXzI1zknM9zYMWf7kESt_uOJr3Rf2TUbK0mSl4EmvnUnGLLu9reUMAJ3fEuZA7T6j6B65k5xxi217eo9wVGMZSwW7cGpV9CuliNcD7ExM9QDYnpDvINsdiXAPSLueC8BFeINCKLHwrPcqmzWaEFsGaiUEmRyMuxwj9S-ZNEZbiw0pVKlMVwsqwj4Mx1MJW-rKNkbB3awFdDD_Bq5W152IVifeiM32OAfyQTdEzo9ZoNqQUinLQY1awJVY-J4SZ_ApftEW8qK8sds");'></div>
-<div>
-<h4 class="text-sm font-bold text-white">Sarah Jenkins</h4>
-<p class="text-xs text-slate-500">Trending Topics • 8 hours ago</p>
-</div>
-</div>
-</div>
-<h3 class="text-lg font-bold text-white mb-2 leading-snug group-hover:text-primary transition-colors">Negotiating salary: What are your top 3 rules?</h3>
-<p class="text-white/60 text-sm line-clamp-2 mb-4">
-                        I have a second interview tomorrow for a Senior Role. I'm nervous about the money talk. What are your non-negotiables?
-                    </p>
-<div class="flex items-center gap-6 text-slate-400">
-<button class="flex items-center gap-1.5 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-[20px] text-primary group-hover:drop-shadow-[0_0_8px_rgba(242,13,128,0.8)] transition-all">favorite</span>
-<span class="text-xs font-bold text-white/80">56</span>
-</button>
-<button class="flex items-center gap-1.5 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-[20px] text-primary group-hover:drop-shadow-[0_0_8px_rgba(242,13,128,0.8)] transition-all">chat_bubble</span>
-<span class="text-xs font-bold text-white/80">31 Replies</span>
-</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Right Column / Trending Sidebar -->
-<aside class="hidden lg:flex lg:col-span-3 flex-col gap-6">
-<div class="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 shadow-2xl">
-<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 mb-4">Trending Topics</h3>
-<div class="flex flex-col gap-4">
-<a class="group" href="#">
-<p class="text-xs font-bold text-primary mb-1">#CareerAdvice</p>
-<p class="text-sm font-bold text-white/90 group-hover:text-primary transition-colors">Remote work scams to avoid</p>
-<p class="text-[10px] text-slate-500 uppercase mt-1">1.2k posts today</p>
-</a>
-<hr class="border-white/5"/>
-<a class="group" href="#">
-<p class="text-xs font-bold text-primary mb-1">#MentalHealth</p>
-<p class="text-sm font-bold text-white/90 group-hover:text-primary transition-colors">Micro-meditation for moms</p>
-<p class="text-[10px] text-slate-500 uppercase mt-1">842 posts today</p>
-</a>
-<hr class="border-white/5"/>
-<a class="group" href="#">
-<p class="text-xs font-bold text-primary mb-1">#Coding</p>
-<p class="text-sm font-bold text-white/90 group-hover:text-primary transition-colors">Python vs JavaScript for beginners</p>
-<p class="text-[10px] text-slate-500 uppercase mt-1">531 posts today</p>
-</a>
-</div>
-</div>
-<div class="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 shadow-2xl">
-<h3 class="font-bold text-lg mb-2">Weekly Challenge</h3>
-<p class="text-sm opacity-90 mb-4">Post one thing you're grateful for today and tag 3 friends to do the same!</p>
-<button class="w-full bg-white text-primary py-2 rounded-lg font-bold text-sm">Join Challenge</button>
-</div>
-<div class="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 shadow-2xl">
-<a class="text-[10px] text-slate-400 hover:text-primary uppercase font-bold tracking-widest" href="#">About</a>
-<a class="text-[10px] text-slate-400 hover:text-primary uppercase font-bold tracking-widest" href="#">Privacy</a>
-<a class="text-[10px] text-slate-400 hover:text-primary uppercase font-bold tracking-widest" href="#">Guidelines</a>
-<a class="text-[10px] text-slate-400 hover:text-primary uppercase font-bold tracking-widest" href="#">Help</a>
-<p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest w-full">© 2024 EmpowHer</p>
-</div>
-</aside>
-</main>
-<!-- Mobile Navigation Bar -->
-<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-black/60 backdrop-blur-lg border-t border-white/10 flex justify-around items-center py-3 z-50">
-<button class="text-primary flex flex-col items-center">
-<span class="material-symbols-outlined">house</span>
-<span class="text-[10px] font-bold">Home</span>
-</button>
-<button class="text-slate-400 flex flex-col items-center">
-<span class="material-symbols-outlined">forum</span>
-<span class="text-[10px] font-bold">Feed</span>
-</button>
-<button class="bg-primary text-white p-2 rounded-full -mt-10 shadow-lg ring-4 ring-background-light dark:ring-background-dark">
-<span class="material-symbols-outlined">add</span>
-</button>
-<button class="text-slate-400 flex flex-col items-center">
-<span class="material-symbols-outlined">school</span>
-<span class="text-[10px] font-bold">Learn</span>
-</button>
-<button class="text-slate-400 flex flex-col items-center">
-<span class="material-symbols-outlined">person</span>
-<span class="text-[10px] font-bold">Profile</span>
-</button>
-</div>
-</div>
-</body></html>
+  </head>
+  <body class="bg-background-dark text-slate-100 min-h-screen">
+    <div class="layout-container flex h-full grow flex-col">
+      <!-- Top Navigation -->
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-white/10 px-6 py-4 md:px-20 lg:px-40 backdrop-blur-md sticky top-0 z-50"
+      >
+        <div class="flex items-center gap-3 text-primary">
+          <div
+            class="size-8 flex items-center justify-center rounded-lg bg-primary/20"
+          >
+            <span class="material-symbols-outlined text-primary">school</span>
+          </div>
+          <h2
+            class="text-slate-100 text-xl font-extrabold leading-tight tracking-tight"
+          >
+            Học tập vui vẻ
+          </h2>
+        </div>
+        <div class="flex items-center gap-4">
+          <button
+            class="flex items-center justify-center rounded-full h-10 w-10 bg-white/10 text-slate-100 hover:bg-primary transition-colors"
+          >
+            <span class="material-symbols-outlined">account_circle</span>
+          </button>
+        </div>
+      </header>
+      <main
+        class="flex flex-1 flex-col items-center justify-center px-4 py-12 md:px-20 lg:px-40"
+      >
+        <div class="max-w-[1200px] w-full">
+          <!-- Heading Section -->
+          <div class="text-center mb-12">
+            <h1
+              class="text-slate-100 tracking-tight text-4xl md:text-5xl font-extrabold mb-4"
+            >
+              Chọn người bạn đồng hành của bạn
+            </h1>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+              Mỗi người bạn đều có những siêu năng lực đặc biệt để giúp bạn khám
+              phá thế giới tri thức.
+            </p>
+          </div>
+          <!-- Characters Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            <!-- Character 1: Luna -->
+            <div
+              class="glass-card group flex flex-col rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:-translate-y-2"
+            >
+              <div class="relative aspect-[4/5] overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent z-10"
+                ></div>
+                <img
+                  alt="Luna Character"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  data-alt="Dũng cảm female cartoon explorer character with a magical compass"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBE0PmUklK9m0jIDpDVTZiQUicwfcbLD-VIyc8rld2gFgJ5725DGpvrrIuHBcOowvoBti6nH0FiLZ2qtAUR2rExGUe4YGT1-rtppwo9e-SGN3Wv_rfo0h6v29gMGrCt9454v8Ph_Eec97jzV7qSpxcgurUx-JsCIG3mQpldcjZFYLcW-kG3LidUHyltQkkqy5iHc514uUs9uihID2gCHq8b_PzDOvud7UnObYLdTjUxUqBUOoZQ8K_1S4EdGHkkninPk2eIxqWXh3_"
+                />
+                <div class="absolute bottom-4 left-4 z-20">
+                  <span
+                    class="bg-primary px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase"
+                    >Dũng cảm</span
+                  >
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1 gap-4">
+                <div>
+                  <h3 class="text-white text-2xl font-bold mb-1">Luna</h3>
+                  <p class="text-slate-400 text-sm leading-relaxed">
+                    Nhà thám hiểm dũng cảm luôn sẵn sàng cho những thử thách mới
+                    và khám phá những vùng đất lạ.
+                  </p>
+                </div>
+                <button
+                  class="mt-auto w-full flex items-center justify-center rounded-xl h-12 bg-primary text-white font-bold text-base transition-all hover:neon-glow active:scale-95"
+                >
+                  <span class="material-symbols-outlined mr-2"
+                    >check_circle</span
+                  >
+                  Chọn Luna
+                </button>
+              </div>
+            </div>
+            <!-- Character 2: Stella -->
+            <div
+              class="glass-card group flex flex-col rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 border-primary/30 ring-2 ring-primary/20"
+            >
+              <div class="relative aspect-[4/5] overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent z-10"
+                ></div>
+                <img
+                  alt="Stella Character"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  data-alt="Phù thủy tri thức female cartoon character with stars and magic book"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrezCFPN1jC66CLiCoMC1iH1XV2NIxj9z9jKCkiJGMz7cbbNVr3cLInzxDn9jSETBZXuhxCWiPXhU21f0BZY6S7xwzaGTbyaYAcVSpwDEq4jg7dVRrSVzSa3AmKK-Pk82ZwFu79hw-8Sj7HBKTG0JvWZGBSkbhjqpA2OXgA2r1yKvNCzSpnf4OKwx-O2DtCoG7lDdQqNrDTFVmtIbem52GaEZnEhL2ZRqoAWl8JvqFnLZHFevu_X0VRhFBKLp4egcYPlhvtLDBfql1"
+                />
+                <div class="absolute bottom-4 left-4 z-20">
+                  <span
+                    class="bg-primary px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase"
+                    >Thông thái</span
+                  >
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1 gap-4">
+                <div>
+                  <h3 class="text-white text-2xl font-bold mb-1">Stella</h3>
+                  <p class="text-slate-400 text-sm leading-relaxed">
+                    Phù thủy tri thức mang theo quyển sách phép thuật chứa đựng
+                    tất cả câu trả lời của vũ trụ.
+                  </p>
+                </div>
+                <button
+                  class="mt-auto w-full flex items-center justify-center rounded-xl h-12 bg-primary text-white font-bold text-base transition-all hover:neon-glow active:scale-95 shadow-[0_0_20px_rgba(236,19,128,0.3)]"
+                >
+                  <span class="material-symbols-outlined mr-2">stars</span>
+                  Chọn Stella
+                </button>
+              </div>
+            </div>
+            <!-- Character 3: Flora -->
+            <div
+              class="glass-card group flex flex-col rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:-translate-y-2"
+            >
+              <div class="relative aspect-[4/5] overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent z-10"
+                ></div>
+                <img
+                  alt="Flora Character"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  data-alt="Người bảo vệ thiên nhiên female cartoon character with flowers and green elements"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3d9g8C6HQ-thBQvrtKgLow5D3LKvkX4KQ6V1TxS08eeEDN0BWUyt2fqj-aJhLlUfir58Ecl6jDAL9Ym7x2y9ZHDf8f2ujri7CPwjawH6pTouu16Newp0v3ytwfjmNtgwwIrtLJi9UkYKFBSf7mOhnG436bI9_fH8fmSVFb3Y2fxVBVJGVIf6c432EUku9vZBGV6MfiTxeus0SMY0HYTeKi3WSdT_2jPpb6zNfwiBWY4fG16QNDYrxIPvRCx2fdmdpIrIgnYiSgQhm"
+                />
+                <div class="absolute bottom-4 left-4 z-20">
+                  <span
+                    class="bg-emerald-500 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase text-white"
+                    >Bình yên</span
+                  >
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1 gap-4">
+                <div>
+                  <h3 class="text-white text-2xl font-bold mb-1">Flora</h3>
+                  <p class="text-slate-400 text-sm leading-relaxed">
+                    Người bảo vệ thiên nhiên dịu dàng, giúp bạn học cách yêu
+                    thương và chăm sóc thế giới xung quanh.
+                  </p>
+                </div>
+                <button
+                  class="mt-auto w-full flex items-center justify-center rounded-xl h-12 bg-primary text-white font-bold text-base transition-all hover:neon-glow active:scale-95"
+                >
+                  <span class="material-symbols-outlined mr-2">eco</span>
+                  Chọn Flora
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Footer Text -->
+          <p class="text-slate-500 text-center mt-12 text-sm">
+            Bạn có thể thay đổi nhân vật bất cứ lúc nào trong phần cài đặt tài
+            khoản.
+          </p>
+        </div>
+      </main>
+      <!-- Bottom Navigation Bar -->
+      <nav
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-1 p-2 rounded-full glass-card border-white/20 shadow-2xl z-50"
+      >
+        <button class="p-3 text-slate-400 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl">home</span>
+        </button>
+        <button class="p-3 text-slate-400 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl">menu_book</span>
+        </button>
+        <button
+          class="p-4 bg-primary rounded-full text-white shadow-lg shadow-primary/40 -translate-y-4"
+        >
+          <span class="material-symbols-outlined text-2xl">person_search</span>
+        </button>
+        <button class="p-3 text-slate-400 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl">star</span>
+        </button>
+        <button class="p-3 text-slate-400 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl">settings</span>
+        </button>
+      </nav>
+    </div>
+  </body>
+</html>
