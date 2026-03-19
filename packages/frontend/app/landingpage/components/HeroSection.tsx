@@ -4,21 +4,21 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col gap-8 order-2 lg:order-1">
           <div className="space-y-4 animate-fade-in-left  text-left">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wide">EMPOWERING FUTURE GENERATIONS</span>
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wide">TRAO QUYỀN CHO THẾ HỆ TƯƠNG LAI</span>
             <h1 className="text-5xl lg:text-7xl font-black leading-tight tracking-tight text-white">
-              Where <span className="text-primary">Curiosity</span> Meets Creativity
+              Nơi <span className="text-primary">Sự Tò Mò</span> Gặp Gỡ Sự Sáng Tạo
             </h1>
             <p className="text-lg lg:text-xl text-slate-400 leading-relaxed max-w-xl">
-              A safe, playful space for women and children to learn, grow, and shine together. Join 10,000+ learners today.
+              Một không gian an toàn, vui nhộn dành cho phụ nữ và trẻ em để cùng nhau học tập, phát triển và toả sáng. Tham gia cùng hơn 10.000 học viên ngay hôm nay.
             </p>
           </div>
           <div className="flex flex-wrap gap-4 animate-fade-in-left  [animation-delay:200ms]">
             <button className="bg-primary text-white px-8 py-4 rounded-xl text-lg font-bold shadow-primary hover:shadow-primary-lg transition-all flex items-center gap-2 hover:-translate-y-1">
-              <span>Start Learning</span>
+              <span>Bắt đầu học</span>
               <span className="material-symbols-outlined">arrow_forward</span>
             </button>
             <button className="bg-white/5 border border-white/10 px-8 py-4 rounded-xl text-lg font-bold text-white hover:bg-white/10 transition-all backdrop-blur-md hover:-translate-y-1">
-              View Courses
+              Xem Khoá Học
             </button>
           </div>
           <div className="flex items-center gap-4 text-sm font-medium text-slate-500 animate-fade-in-left  [animation-delay:400ms]">
@@ -31,7 +31,7 @@ export default function HeroSection() {
               <img className="size-8 rounded-full border-2 border-background-light" alt="Student avatar 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtxKhyLMm6qaJ0YonT0UeKTyFoTRD-0ODt_8XApUVEhjkSZkXUZzvbDQ7eAfdGDIKi8-fevPNcmrmgsmXmCkl4QfR9wOFr_xdGw93yNv8IoCcGlZdhqgG_0GTR5xDYNuYOIH6o7c_3OX9ua2sMOTFVudlADAzLAovccoi2G1SPkZbHeKv7iN9eMoQcurDJKlQDfZwOCBaC-ngGLylYBLBuQi0igZzbY9x1lq5S7ADVEa_ZYSOvvGs6cRqqNsjvImckUDgs8Yhwc9Zu"/>
               <div className="size-8 rounded-full bg-primary flex items-center justify-center text-white text-[10px] border-2 border-background-light">+12k</div>
             </div>
-            <span>Joined by thousands of happy learners</span>
+            <span>Hàng ngàn học viên hạnh phúc đã tham gia</span>
           </div>
         </div>
         <div className="order-1 lg:order-2 relative animate-fade-in-right  [animation-delay:300ms]">
@@ -45,8 +45,8 @@ export default function HeroSection() {
                 <span className="material-symbols-outlined">verified</span>
               </div>
               <div>
-                <p className="font-bold text-sm">Safe Learning Zone</p>
-                <p className="text-xs text-slate-500">Certified child-friendly environment</p>
+                <p className="font-bold text-sm">Khu vực học tập an toàn</p>
+                <p className="text-xs text-slate-500">Môi trường thân thiện với trẻ em được chứng nhận</p>
               </div>
             </div>
           </div>

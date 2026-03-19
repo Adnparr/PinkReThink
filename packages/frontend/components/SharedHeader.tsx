@@ -12,10 +12,10 @@ export default function SharedHeader() {
   );
 
   const navLinks = [
-    { name: "Home", href: "/landingpage" },
-    { name: "Community", href: "/community" },
-    { name: "Courses", href: "/roadmap" },
-    { name: "Profile", href: "/profile" },
+    { name: "Trang chủ", href: "/landingpage" },
+    { name: "Cộng đồng", href: "/community" },
+    { name: "Lộ trình", href: "/roadmap" },
+    { name: "Hồ sơ", href: "/profile" },
   ];
 
   useEffect(() => {
@@ -76,7 +76,7 @@ export default function SharedHeader() {
           </span>
           <input
             className="bg-transparent border-none focus:ring-0 text-sm placeholder:text-slate-500 text-white w-32 lg:w-48 ml-2 outline-none"
-            placeholder="Search..."
+            placeholder="Tìm kiếm..."
             type="text"
           />
         </div>
@@ -110,7 +110,7 @@ export default function SharedHeader() {
                     <span className="material-symbols-outlined text-lg">
                       person
                     </span>
-                    Profile & Settings
+                    Hồ sơ & Cài đặt
                   </Link>
                   <Link
                     href="/roadmap"
@@ -119,7 +119,7 @@ export default function SharedHeader() {
                     <span className="material-symbols-outlined text-lg">
                       hotel_class
                     </span>
-                    My Progress
+                    Tiến trình của tôi
                   </Link>
                   <div className="h-px bg-white/10 w-full"></div>
                   <button
@@ -129,7 +129,7 @@ export default function SharedHeader() {
                     <span className="material-symbols-outlined text-lg">
                       logout
                     </span>
-                    Logout
+                    Đăng xuất
                   </button>
                 </div>
               </div>

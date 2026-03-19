@@ -5,11 +5,11 @@ export default function MainContent() {
     <div className="flex-1 overflow-y-auto p-4 lg:p-8">
       {/* Breadcrumbs */}
       <div className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-500">
-        <a className="hover:text-primary" href="/roadmap">Dashboard</a>
+        <a className="hover:text-primary" href="/roadmap">Bảng điều khiển</a>
         <span className="material-symbols-outlined text-xs">chevron_right</span>
-        <a className="hover:text-primary" href="#">Creative Design 101</a>
+        <a className="hover:text-primary" href="#">Thiết kế Sáng tạo 101</a>
         <span className="material-symbols-outlined text-xs">chevron_right</span>
-        <span className="text-slate-900 dark:text-slate-200">Visual Principles</span>
+        <span className="text-slate-900 dark:text-slate-200">Nguyên tắc Thị giác</span>
       </div>
 
       {/* Video Player */}
@@ -43,13 +43,13 @@ export default function MainContent() {
       {/* Lesson Info */}
       <div className="mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Module 3: Understanding Visual Hierarchy</h1>
-          <p className="mt-2 text-slate-600 dark:text-slate-400">Instructor: Sarah Jenkins • Updated May 2024</p>
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Học phần 3: Hiểu về Phân cấp Thị giác</h1>
+          <p className="mt-2 text-slate-600 dark:text-slate-400">Giảng viên: Sarah Jenkins • Cập nhật Tháng 5 năm 2024</p>
         </div>
         <div className="flex gap-3">
           <button className="flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90">
             <span className="material-symbols-outlined">check_circle</span>
-            Mark as Completed
+            Đánh dấu Đã hoàn thành
           </button>
           <button className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-slate-600 ring-1 ring-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:ring-slate-700">
             <span className="material-symbols-outlined">share</span>
@@ -60,9 +60,9 @@ export default function MainContent() {
       {/* Tabs Section */}
       <div className="mt-8">
         <div className="flex border-b border-primary/10">
-          <button className="border-b-2 border-primary px-6 py-4 text-sm font-bold text-primary">Lesson Notes</button>
-          <button className="px-6 py-4 text-sm font-semibold text-slate-500 hover:text-slate-900 dark:hover:text-slate-200">Downloads</button>
-          <button className="px-6 py-4 text-sm font-semibold text-slate-500 hover:text-slate-900 dark:hover:text-slate-200">Discussion (24)</button>
+          <button className="border-b-2 border-primary px-6 py-4 text-sm font-bold text-primary">Ghi chú Bài học</button>
+          <button className="px-6 py-4 text-sm font-semibold text-slate-500 hover:text-slate-900 dark:hover:text-slate-200">Tải xuống</button>
+          <button className="px-6 py-4 text-sm font-semibold text-slate-500 hover:text-slate-900 dark:hover:text-slate-200">Thảo luận (24)</button>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8">
@@ -71,20 +71,20 @@ export default function MainContent() {
             <div className="rounded-2xl p-6 glass-panel">
               <h3 className="mb-4 flex items-center gap-2 font-bold text-white">
                 <span className="material-symbols-outlined text-primary">description</span>
-                Key Takeaways
+                Những Điểm chính
               </h3>
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary shadow-[0_0_8px_#00f3ff]"></span>
-                  Visual hierarchy is the arrangement or presentation of elements in a way that implies importance.
+                  Phân cấp thị giác là sự sắp xếp hoặc trình bày các yếu tố theo cách ngụ ý tầm quan trọng.
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary shadow-[0_0_8px_#00f3ff]"></span>
-                  Size and scale are the most fundamental ways to establish hierarchy.
+                  Kích thước và tỷ lệ là những cách cơ bản nhất để thiết lập hệ thống phân cấp.
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary shadow-[0_0_8px_#00f3ff]"></span>
-                  Color and contrast draw the eye towards specific call-to-action buttons.
+                  Màu sắc và độ tương phản thu hút ánh nhìn vào các nút kêu gọi hành động cụ thể.
                 </li>
               </ul>
             </div>
@@ -92,11 +92,11 @@ export default function MainContent() {
             <div className="rounded-2xl p-6 glass-panel">
               <h3 className="mb-4 flex items-center gap-2 font-bold text-slate-900 dark:text-white">
                 <span className="material-symbols-outlined text-primary">edit_note</span>
-                Your Personal Notes
+                Ghi chú Cá nhân của Bạn
               </h3>
               <textarea 
                 className="w-full rounded-xl border-dashed border-2 border-slate-200 bg-transparent p-4 text-sm focus:border-primary focus:ring-0 dark:border-slate-700 text-white placeholder-slate-500" 
-                placeholder="Click here to type your own notes for this lesson..."
+                placeholder="Nhấp vào đây để nhập ghi chú của riêng bạn cho bài học này..."
                 rows={4}
               ></textarea>
             </div>
@@ -106,7 +106,7 @@ export default function MainContent() {
           <div className="space-y-4">
             <h3 className="flex items-center gap-2 font-bold text-slate-900 dark:text-white">
               <span className="material-symbols-outlined text-primary">cloud_download</span>
-              Course Materials
+              Tài liệu Khóa học
             </h3>
             
             <div className="flex items-center justify-between rounded-xl p-4 glass-panel">

@@ -1,250 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 
-<html class="dark" lang="vi">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#ec1380",
-              "background-light": "#f8f6f7",
-              "background-dark": "#120812",
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Câu chuyện thật của Luna</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#0f050a",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
             },
-            fontFamily: {
-              display: ["Plus Jakarta Sans", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.5rem",
-              lg: "1rem",
-              xl: "1.5rem",
-              full: "9999px",
-            },
-          },
-        },
-      };
+        }
     </script>
-    <style>
-      body {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        background:
-          radial-gradient(circle at top left, #221019, #120812),
-          radial-gradient(circle at bottom right, #4a044e, #120812);
-        background-attachment: fixed;
-      }
-      .glass-card {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .neon-glow {
-        box-shadow: 0 0 15px rgba(236, 19, 128, 0.4);
-      }
+<style>
+        .liquid-gradient {
+            background: linear-gradient(45deg, #0f050a 0%, #221019 35%, #4a0e2e 70%, #1a0812 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(236, 19, 128, 0.2);
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(236, 19, 128, 0.4);
+        }
     </style>
-  </head>
-  <body class="bg-background-dark text-slate-100 min-h-screen">
-    <div class="layout-container flex h-full grow flex-col">
-      <!-- Top Navigation -->
-      <header
-        class="flex items-center justify-between whitespace-nowrap border-b border-white/10 px-6 py-4 md:px-20 lg:px-40 backdrop-blur-md sticky top-0 z-50"
-      >
-        <div class="flex items-center gap-3 text-primary">
-          <div
-            class="size-8 flex items-center justify-center rounded-lg bg-primary/20"
-          >
-            <span class="material-symbols-outlined text-primary">school</span>
-          </div>
-          <h2
-            class="text-slate-100 text-xl font-extrabold leading-tight tracking-tight"
-          >
-            Học tập vui vẻ
-          </h2>
-        </div>
-        <div class="flex items-center gap-4">
-          <button
-            class="flex items-center justify-center rounded-full h-10 w-10 bg-white/10 text-slate-100 hover:bg-primary transition-colors"
-          >
-            <span class="material-symbols-outlined">account_circle</span>
-          </button>
-        </div>
-      </header>
-      <main
-        class="flex flex-1 flex-col items-center justify-center px-4 py-12 md:px-20 lg:px-40"
-      >
-        <div class="max-w-[1200px] w-full">
-          <!-- Heading Section -->
-          <div class="text-center mb-12">
-            <h1
-              class="text-slate-100 tracking-tight text-4xl md:text-5xl font-extrabold mb-4"
-            >
-              Chọn người bạn đồng hành của bạn
-            </h1>
-            <p class="text-slate-400 text-lg max-w-2xl mx-auto">
-              Mỗi người bạn đều có những siêu năng lực đặc biệt để giúp bạn khám
-              phá thế giới tri thức.
-            </p>
-          </div>
-          <!-- Characters Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-            <!-- Character 1: Luna -->
-            <div
-              class="glass-card group flex flex-col rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:-translate-y-2"
-            >
-              <div class="relative aspect-[4/5] overflow-hidden">
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent z-10"
-                ></div>
-                <img
-                  alt="Luna Character"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  data-alt="Dũng cảm female cartoon explorer character with a magical compass"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBE0PmUklK9m0jIDpDVTZiQUicwfcbLD-VIyc8rld2gFgJ5725DGpvrrIuHBcOowvoBti6nH0FiLZ2qtAUR2rExGUe4YGT1-rtppwo9e-SGN3Wv_rfo0h6v29gMGrCt9454v8Ph_Eec97jzV7qSpxcgurUx-JsCIG3mQpldcjZFYLcW-kG3LidUHyltQkkqy5iHc514uUs9uihID2gCHq8b_PzDOvud7UnObYLdTjUxUqBUOoZQ8K_1S4EdGHkkninPk2eIxqWXh3_"
-                />
-                <div class="absolute bottom-4 left-4 z-20">
-                  <span
-                    class="bg-primary px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase"
-                    >Dũng cảm</span
-                  >
-                </div>
-              </div>
-              <div class="p-6 flex flex-col flex-1 gap-4">
-                <div>
-                  <h3 class="text-white text-2xl font-bold mb-1">Luna</h3>
-                  <p class="text-slate-400 text-sm leading-relaxed">
-                    Nhà thám hiểm dũng cảm luôn sẵn sàng cho những thử thách mới
-                    và khám phá những vùng đất lạ.
-                  </p>
-                </div>
-                <button
-                  class="mt-auto w-full flex items-center justify-center rounded-xl h-12 bg-primary text-white font-bold text-base transition-all hover:neon-glow active:scale-95"
-                >
-                  <span class="material-symbols-outlined mr-2"
-                    >check_circle</span
-                  >
-                  Chọn Luna
-                </button>
-              </div>
-            </div>
-            <!-- Character 2: Stella -->
-            <div
-              class="glass-card group flex flex-col rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 border-primary/30 ring-2 ring-primary/20"
-            >
-              <div class="relative aspect-[4/5] overflow-hidden">
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent z-10"
-                ></div>
-                <img
-                  alt="Stella Character"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  data-alt="Phù thủy tri thức female cartoon character with stars and magic book"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrezCFPN1jC66CLiCoMC1iH1XV2NIxj9z9jKCkiJGMz7cbbNVr3cLInzxDn9jSETBZXuhxCWiPXhU21f0BZY6S7xwzaGTbyaYAcVSpwDEq4jg7dVRrSVzSa3AmKK-Pk82ZwFu79hw-8Sj7HBKTG0JvWZGBSkbhjqpA2OXgA2r1yKvNCzSpnf4OKwx-O2DtCoG7lDdQqNrDTFVmtIbem52GaEZnEhL2ZRqoAWl8JvqFnLZHFevu_X0VRhFBKLp4egcYPlhvtLDBfql1"
-                />
-                <div class="absolute bottom-4 left-4 z-20">
-                  <span
-                    class="bg-primary px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase"
-                    >Thông thái</span
-                  >
-                </div>
-              </div>
-              <div class="p-6 flex flex-col flex-1 gap-4">
-                <div>
-                  <h3 class="text-white text-2xl font-bold mb-1">Stella</h3>
-                  <p class="text-slate-400 text-sm leading-relaxed">
-                    Phù thủy tri thức mang theo quyển sách phép thuật chứa đựng
-                    tất cả câu trả lời của vũ trụ.
-                  </p>
-                </div>
-                <button
-                  class="mt-auto w-full flex items-center justify-center rounded-xl h-12 bg-primary text-white font-bold text-base transition-all hover:neon-glow active:scale-95 shadow-[0_0_20px_rgba(236,19,128,0.3)]"
-                >
-                  <span class="material-symbols-outlined mr-2">stars</span>
-                  Chọn Stella
-                </button>
-              </div>
-            </div>
-            <!-- Character 3: Flora -->
-            <div
-              class="glass-card group flex flex-col rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:-translate-y-2"
-            >
-              <div class="relative aspect-[4/5] overflow-hidden">
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent z-10"
-                ></div>
-                <img
-                  alt="Flora Character"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  data-alt="Người bảo vệ thiên nhiên female cartoon character with flowers and green elements"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3d9g8C6HQ-thBQvrtKgLow5D3LKvkX4KQ6V1TxS08eeEDN0BWUyt2fqj-aJhLlUfir58Ecl6jDAL9Ym7x2y9ZHDf8f2ujri7CPwjawH6pTouu16Newp0v3ytwfjmNtgwwIrtLJi9UkYKFBSf7mOhnG436bI9_fH8fmSVFb3Y2fxVBVJGVIf6c432EUku9vZBGV6MfiTxeus0SMY0HYTeKi3WSdT_2jPpb6zNfwiBWY4fG16QNDYrxIPvRCx2fdmdpIrIgnYiSgQhm"
-                />
-                <div class="absolute bottom-4 left-4 z-20">
-                  <span
-                    class="bg-emerald-500 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase text-white"
-                    >Bình yên</span
-                  >
-                </div>
-              </div>
-              <div class="p-6 flex flex-col flex-1 gap-4">
-                <div>
-                  <h3 class="text-white text-2xl font-bold mb-1">Flora</h3>
-                  <p class="text-slate-400 text-sm leading-relaxed">
-                    Người bảo vệ thiên nhiên dịu dàng, giúp bạn học cách yêu
-                    thương và chăm sóc thế giới xung quanh.
-                  </p>
-                </div>
-                <button
-                  class="mt-auto w-full flex items-center justify-center rounded-xl h-12 bg-primary text-white font-bold text-base transition-all hover:neon-glow active:scale-95"
-                >
-                  <span class="material-symbols-outlined mr-2">eco</span>
-                  Chọn Flora
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- Footer Text -->
-          <p class="text-slate-500 text-center mt-12 text-sm">
-            Bạn có thể thay đổi nhân vật bất cứ lúc nào trong phần cài đặt tài
-            khoản.
-          </p>
-        </div>
-      </main>
-      <!-- Bottom Navigation Bar -->
-      <nav
-        class="fixed bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-1 p-2 rounded-full glass-card border-white/20 shadow-2xl z-50"
-      >
-        <button class="p-3 text-slate-400 hover:text-primary transition-colors">
-          <span class="material-symbols-outlined text-2xl">home</span>
-        </button>
-        <button class="p-3 text-slate-400 hover:text-primary transition-colors">
-          <span class="material-symbols-outlined text-2xl">menu_book</span>
-        </button>
-        <button
-          class="p-4 bg-primary rounded-full text-white shadow-lg shadow-primary/40 -translate-y-4"
-        >
-          <span class="material-symbols-outlined text-2xl">person_search</span>
-        </button>
-        <button class="p-3 text-slate-400 hover:text-primary transition-colors">
-          <span class="material-symbols-outlined text-2xl">star</span>
-        </button>
-        <button class="p-3 text-slate-400 hover:text-primary transition-colors">
-          <span class="material-symbols-outlined text-2xl">settings</span>
-        </button>
-      </nav>
-    </div>
-  </body>
-</html>
+</head>
+<body class="bg-background-dark text-slate-100 font-display min-h-screen liquid-gradient selection:bg-primary/30">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/10 px-6 md:px-20 py-4 bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-4 text-slate-100">
+<div class="size-8 flex items-center justify-center bg-primary/20 rounded-lg">
+<span class="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+</div>
+<h2 class="text-slate-100 text-lg font-bold leading-tight tracking-tight">Câu chuyện thật</h2>
+</div>
+<button class="flex items-center justify-center rounded-xl h-10 bg-primary/10 hover:bg-primary/20 text-primary transition-all px-4 gap-2 text-sm font-bold">
+<span class="material-symbols-outlined">share</span>
+<span>Chia sẻ</span>
+</button>
+</header>
+<main class="flex-1 flex flex-col items-center py-8 px-4 md:px-10">
+<div class="max-w-[1000px] w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+<div class="relative aspect-[4/5] md:aspect-square overflow-hidden rounded-xl bg-slate-800 border border-white/10">
+<img class="w-full h-full object-cover" data-alt="A young girl sitting at a desk dreaming and drawing stars" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5tlXtqdOWZl3vbfRNjpQ0w-J1Ht4nQsU9WBerFCh3TgZvdllJGtFeTak5SWW_Vcog6CzTX8b5ZQqvIOOVFbXKT7uMQZ0sRCmkdlPzD0ZKl_9PGveTczvdAPKW05K6ecCMZGu29KVgMiqx_VJDCah2-eYcGKwF9GeB_gRdMSEqAWOcCJTG-cPE4nzrK5ZYw-DuBsWDgANc3R0IqJJ_8XQx_vZM6Uv2UcP5jL-qf7JB8j-yoRAIxm-40otMVNxI-dv1fBvuDBqp63bK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="bg-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-white mb-2 inline-block">Khởi đầu</span>
+<h1 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">Luna: Từ giấc mơ đến những vì sao</h1>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="glass-card p-8 rounded-xl">
+<h3 class="text-primary font-bold text-xl mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">menu_book</span>
+                                Hành trình bắt đầu
+                            </h3>
+<div class="space-y-4 text-slate-300 leading-relaxed text-lg">
+<p>Trước khi trở thành người dẫn đường cho các vì sao, Luna cũng chỉ là một cô bé bình thường với cuốn sổ tay và những ước mơ dang dở.</p>
+<p>Cô ấy đã từng sợ hãi bóng tối, từng vấp ngã khi cố gắng trèo lên những đỉnh đồi cao nhất, nhưng chưa bao giờ cô ấy từ bỏ việc nhìn lên bầu trời và tin rằng mình thuộc về nơi đó.</p>
+<p class="italic text-primary/80">"Mỗi vì sao đều bắt đầu từ một hạt bụi, và mỗi hành trình lớn đều bắt đầu từ những bước nhỏ bé nhất."</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl neon-glow">
+<div class="flex items-center gap-5 overflow-hidden">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16 shrink-0 border-2 border-primary/30" data-alt="Abstract mystical nebula with soft pink tones" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8nWjLHpigQxQCPDsRW-yWZxu1szqs4xMvDic5jSUUZ5RSv_6aIm5PZk_1T1XvEtWHZfx7Tbfk5cL5_Zuo8OxnRczb4vIe8bV8b-FmCzSiApFhXKY3GHbRLT9lgguVYChI80n-e-liKaadMXvsC2fcLR0DNfbURgO3OFR2SOazFe3bTqg58MlFEdAGuOBlIIxFBbBX3faMEKZ0oyvglGAMcCVO7nEQv-jdrLhcqeenNUbPdFZmkCjo64LYbCtcss0FkDmSGL2v5361");'>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-primary rounded-full p-0.5 border-2 border-background-dark">
+<span class="material-symbols-outlined text-[12px] text-white">verified</span>
+</div>
+</div>
+<div class="flex-1">
+<p class="text-white text-lg font-bold leading-tight truncate">Lời tự sự của Luna</p>
+<p class="text-primary/60 text-sm font-medium leading-normal truncate">Lắng nghe hành trình thực tế</p>
+</div>
+<button class="flex shrink-0 items-center justify-center rounded-full size-12 bg-primary text-white hover:scale-105 transition-transform shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined fill-1">play_arrow</span>
+</button>
+</div>
+<div class="pt-6">
+<div class="flex h-1 items-center justify-center bg-white/10 rounded-full relative mb-4">
+<div class="h-1 w-1/3 rounded-full bg-primary relative">
+<div class="absolute -right-2 -top-1.5 size-4 rounded-full bg-primary border-4 border-background-dark shadow-sm"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-xs font-semibold text-slate-500 uppercase tracking-widest">
+<p>01:17</p>
+<p>04:52</p>
+</div>
+</div>
+</div>
+<div class="bg-primary/10 border border-primary/30 p-6 rounded-xl flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">lightbulb</span>
+<p class="text-slate-200 font-medium">Bạn đã hoàn thành chương này. Câu chuyện của Luna là minh chứng rằng sự kiên trì luôn được đền đáp.</p>
+</div>
+</div>
+</div>
+<div class="w-full max-w-[1000px] mt-16 text-center border-t border-white/5 pt-12 pb-20">
+<h2 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-4">
+                        "Mọi hành trình lớn đều bắt đầu từ những bước nhỏ"
+                    </h2>
+<p class="text-slate-500 max-w-lg mx-auto">Cảm ơn bạn đã đồng hành cùng Luna. Hãy tiếp tục viết nên câu chuyện của riêng mình.</p>
+<div class="flex flex-wrap justify-center gap-4 mt-10">
+<button class="px-8 py-3 rounded-full bg-primary text-white font-bold hover:bg-primary/90 transition-all flex items-center gap-2">
+<span>Hành trình tiếp theo</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-all">
+                            Quay lại trang chủ
+                        </button>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

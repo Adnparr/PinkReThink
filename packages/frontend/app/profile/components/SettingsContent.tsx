@@ -7,12 +7,12 @@ export default function SettingsContent() {
       <section className="bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-md shadow-2xl shadow-black/50 mb-6 mt-6">
         <div className="flex items-center gap-2 mb-6 bg-white/5 p-2 -mx-2 rounded-lg">
           <span className="material-symbols-outlined text-primary">manage_accounts</span>
-          <h2 className="text-xl font-bold text-white">Personal Information</h2>
+          <h2 className="text-xl font-bold text-white">Thông tin Cá nhân</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-slate-500">Full Name</label>
+            <label className="text-sm font-semibold text-slate-500">Họ và Tên</label>
             <input 
               className="w-full px-4 py-2 rounded-lg border border-white/10 bg-white/5 text-white focus:border-secondary focus:ring-1 focus:ring-secondary/20 outline-none transition-all placeholder:text-slate-500" 
               type="text" 
@@ -20,7 +20,7 @@ export default function SettingsContent() {
             />
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-slate-500">Email Address</label>
+            <label className="text-sm font-semibold text-slate-500">Địa chỉ Email</label>
             <input 
               className="w-full px-4 py-2 rounded-lg border border-white/10 bg-white/5 text-white focus:border-secondary focus:ring-1 focus:ring-secondary/20 outline-none transition-all placeholder:text-slate-500" 
               type="email" 
@@ -28,11 +28,11 @@ export default function SettingsContent() {
             />
           </div>
           <div className="space-y-2 md:col-span-2">
-            <label className="text-sm font-semibold text-slate-500">Bio</label>
+            <label className="text-sm font-semibold text-slate-500">Tiểu sử</label>
             <textarea 
               className="w-full px-4 py-2 rounded-lg border border-white/10 bg-white/5 text-white focus:border-secondary focus:ring-1 focus:ring-secondary/20 outline-none transition-all placeholder:text-slate-500" 
               rows={3} 
-              defaultValue="Passionate learner interested in digital design and front-end development. Currently exploring UI/UX trends."
+              defaultValue="Học viên đam mê với thiết kế kỹ thuật số và lập trình front-end. Hiện đang khám phá các xu hướng UI/UX."
             ></textarea>
           </div>
         </div>
@@ -42,14 +42,14 @@ export default function SettingsContent() {
       <section className="bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-md shadow-2xl shadow-black/50 mb-6">
         <div className="flex items-center gap-2 mb-6 bg-white/5 p-2 -mx-2 rounded-lg">
           <span className="material-symbols-outlined text-primary">security</span>
-          <h2 className="text-xl font-bold text-white">Privacy Preferences</h2>
+          <h2 className="text-xl font-bold text-white">Tùy chọn bảo mật</h2>
         </div>
         
         <div className="space-y-6">
           <div className="bg-white/5 p-4 rounded-lg border border-white/10 flex items-center justify-between">
             <div>
-              <p className="font-bold text-white">Public Profile Visibility</p>
-              <p className="text-sm text-slate-500">Allow others to see your level and points</p>
+              <p className="font-bold text-white">Hiển thị Hồ sơ Công khai</p>
+              <p className="text-sm text-slate-500">Cho phép người khác xem cấp độ và điểm số của bạn</p>
             </div>
             <div className="relative inline-block w-12 h-6 rounded-full bg-primary transition-colors cursor-pointer">
               <div className="absolute right-1 top-1 bg-white w-4 h-4 rounded-full"></div>
@@ -57,8 +57,8 @@ export default function SettingsContent() {
           </div>
           <div className="bg-white/5 p-4 rounded-lg border border-white/10 flex items-center justify-between">
             <div>
-              <p className="font-bold text-white">Course Activity Sharing</p>
-              <p className="text-sm text-slate-500">Share your progress with classmates</p>
+              <p className="font-bold text-white">Chia sẻ Hoạt động Khóa học</p>
+              <p className="text-sm text-slate-500">Chia sẻ tiến trình của bạn với các bạn cùng lớp</p>
             </div>
             <div className="relative inline-block w-12 h-6 rounded-full bg-slate-300 dark:bg-slate-700 transition-colors cursor-pointer">
               <div className="absolute left-1 top-1 bg-white w-4 h-4 rounded-full"></div>
@@ -71,7 +71,7 @@ export default function SettingsContent() {
       <section className="bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-md shadow-2xl shadow-black/50 mb-6">
         <div className="flex items-center gap-2 mb-6 bg-white/5 p-2 -mx-2 rounded-lg">
           <span className="material-symbols-outlined text-primary">link</span>
-          <h2 className="text-xl font-bold text-white">Linked Accounts</h2>
+          <h2 className="text-xl font-bold text-white">Tài khoản liên kết</h2>
         </div>
         
         <div className="space-y-4">
@@ -82,10 +82,10 @@ export default function SettingsContent() {
               </div>
               <div>
                 <p className="font-bold">GitHub</p>
-                <p className="text-sm text-slate-500">Connected as sarahj-dev</p>
+                <p className="text-sm text-slate-500">Đã kết nối với tên sarahj-dev</p>
               </div>
             </div>
-            <button className="px-4 py-2 text-sm font-bold text-slate-500 hover:text-red-500 transition-colors">Disconnect</button>
+            <button className="px-4 py-2 text-sm font-bold text-slate-500 hover:text-red-500 transition-colors">Ngắt kết nối</button>
           </div>
           
           <div className="bg-white/5 p-4 rounded-lg border border-white/10 flex items-center justify-between">
@@ -95,10 +95,10 @@ export default function SettingsContent() {
               </div>
               <div>
                 <p className="font-bold">LinkedIn</p>
-                <p className="text-sm text-slate-500">Not connected</p>
+                <p className="text-sm text-slate-500">Chưa kết nối</p>
               </div>
             </div>
-            <button className="px-4 py-2 text-sm font-bold text-secondary hover:bg-secondary/10 rounded-lg transition-colors">Connect Account</button>
+            <button className="px-4 py-2 text-sm font-bold text-secondary hover:bg-secondary/10 rounded-lg transition-colors">Kết nối Tài khoản</button>
           </div>
         </div>
       </section>

@@ -93,34 +93,26 @@ export default function CharacterCard({
           </p>
         </div>
 
-        {/* Stat pills */}
-        <div className="flex flex-wrap gap-2 mt-auto">
-          <span className="flex items-center gap-1 text-xs font-semibold text-slate-400 bg-white/5 px-2 py-1 rounded-full border border-white/10">
-            <span className="material-symbols-outlined text-primary text-sm">
-              {character.icon}
-            </span>
-            Khả năng đặc biệt
-          </span>
-        </div>
-
         <button
           type="button"
           onClick={(e) => {
             e.stopPropagation();
             onSelect(character.id);
           }}
-          className={`w-full flex items-center justify-center gap-2 rounded-xl h-12 font-bold text-base transition-all active:scale-95
+          className={`mt-auto w-full flex items-center justify-center gap-2 rounded-xl h-12 px-4 font-bold text-base transition-all active:scale-95 border
             ${
               selected
-                ? "bg-primary shadow-[0_0_20px_rgba(242,13,128,0.45)] text-white"
-                : "bg-white/5 hover:bg-primary/90 border border-white/10 hover:border-primary text-slate-300 hover:text-white"
+                ? "bg-primary border-primary/60 shadow-[0_0_20px_rgba(242,13,128,0.45)] text-white"
+                : "bg-white/5 hover:bg-primary/90 border-white/10 hover:border-primary text-slate-300 hover:text-white"
             }
           `}
         >
-          <span className="material-symbols-outlined text-lg">
+          <span className="material-symbols-outlined text-lg w-5 h-5 flex items-center justify-center flex-shrink-0">
             {selected ? "check_circle" : "radio_button_unchecked"}
           </span>
-          {selected ? `Đã chọn ${character.name}` : `Chọn ${character.name}`}
+          <span className="leading-none whitespace-nowrap overflow-hidden text-ellipsis">
+            {selected ? `Đã chọn ${character.name}` : `Chọn ${character.name}`}
+          </span>
         </button>
       </div>
     </div>

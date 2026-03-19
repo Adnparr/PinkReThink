@@ -15,9 +15,9 @@ export default function Sidebar() {
             }}
           ></div>
           <div className="flex flex-col">
-            <h1 className="text-white text-base font-bold">Adventurer Alex</h1>
+            <h1 className="text-white text-base font-bold">Nhà thám hiểm Alex</h1>
             <p className="text-primary text-xs font-semibold uppercase tracking-wider">
-              Level 12 Scholar
+              Học giả Cấp 12
             </p>
           </div>
         </div>
@@ -29,28 +29,28 @@ export default function Sidebar() {
             href="#"
           >
             <span className="material-symbols-outlined">home</span>
-            <span className="text-sm font-bold">Home Dashboard</span>
+            <span className="text-sm font-bold">Bảng điều khiển</span>
           </a>
           <a
             className="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary text-white shadow-lg shadow-primary/30"
             href="#"
           >
             <span className="material-symbols-outlined">map</span>
-            <span className="text-sm font-bold">Course Map</span>
+            <span className="text-sm font-bold">Bản đồ Khoá học</span>
           </a>
           <a
             className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 text-slate-400 hover:text-white transition-colors"
             href="#"
           >
             <span className="material-symbols-outlined">trophy</span>
-            <span className="text-sm font-bold">Leaderboard</span>
+            <span className="text-sm font-bold">Bảng xếp hạng</span>
           </a>
           <a
             className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 text-slate-400 hover:text-white transition-colors"
             href="#"
           >
             <span className="material-symbols-outlined">person</span>
-            <span className="text-sm font-bold">Profile</span>
+            <span className="text-sm font-bold">Hồ sơ</span>
           </a>
         </div>
       </div>
@@ -58,11 +58,11 @@ export default function Sidebar() {
       {/* Progress Widget */}
       <div className="mt-auto bg-primary/5 p-4 rounded-xl border border-primary/10">
         <p className="text-xs font-bold text-primary mb-2 uppercase tracking-widest">
-          Next Milestone
+          Cột mốc Tiếp theo
         </p>
-        <h3 className="text-sm font-bold text-white mb-1">Graduation Peak</h3>
+        <h3 className="text-sm font-bold text-white mb-1">Đỉnh cao Tốt nghiệp</h3>
         <p className="text-xs text-slate-400 mb-3">
-          4 lessons until final exam
+          Còn 4 bài học nữa đến bài thi cuối kì
         </p>
         <div className="w-full bg-white/10 h-2 rounded-full overflow-hidden">
           <div className="bg-primary h-full w-[65%] shadow-[0_0_8px_rgba(242,13,128,0.6)]"></div>
